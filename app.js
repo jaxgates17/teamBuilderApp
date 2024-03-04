@@ -48,7 +48,7 @@
                     }
                     formData.append('teamName', this.teamName);
                     
-                    fetch("https://jaxpokemonteambuilder.netlify.app/teams", {
+                    fetch("https://kind-yak-necklace.cyclic.app/teams", {
                         method: "POST",
                         body: formData.toString(),
                         headers: {
@@ -70,7 +70,7 @@
             deleteTeam: function (index) {
                 if (confirm("Are you sure you want to delete this team?")) {
                     const teamId = this.teams[index]._id;
-                    fetch(`https://jaxpokemonteambuilder.netlify.app/teams/${teamId}`, {
+                    fetch(`https://kind-yak-necklace.cyclic.app/teams/${teamId}`, {
                         method: "DELETE"
                     })
                     .then(response => {
@@ -124,7 +124,7 @@
                     }
                     formData.append('teamName', this.teamName); 
                     
-                    fetch(`https://jaxpokemonteambuilder.netlify.app/teams/${teamId}`, {
+                    fetch(`https://kind-yak-necklace.cyclic.app/teams/${teamId}`, {
                         method: "PUT",
                         body: formData.toString(), 
                         headers: {
@@ -148,7 +148,7 @@
             },
     
             loadTeams: function () {
-                fetch("https://jaxpokemonteambuilder.netlify.app/teams").then((response) => {
+                fetch("https://kind-yak-necklace.cyclic.app/teams").then((response) => {
                     if (response.status == 200) {
                         response.json().then((teamsFromServer) => {
                             console.log("received team from API:", teamsFromServer)
@@ -282,7 +282,7 @@
                     return;
                 }
     
-                fetch(`https://jaxpokemonteambuilder.netlify.app/pokemon?name=${encodeURIComponent(pokemonName)}`)
+                fetch(`hhttps://kind-yak-necklace.cyclic.app/pokemon?name=${encodeURIComponent(pokemonName)}`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Pokemon not found');
