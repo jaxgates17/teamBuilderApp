@@ -282,7 +282,7 @@
                     return;
                 }
     
-                fetch(`hhttps://kind-yak-necklace.cyclic.app/pokemon?name=${encodeURIComponent(pokemonName)}`)
+                fetch(`https://kind-yak-necklace.cyclic.app/pokemon?name=${encodeURIComponent(pokemonName)}`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Pokemon not found');
