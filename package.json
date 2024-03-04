@@ -1,4 +1,11 @@
 {
+  "main": "pokemon.js",
+  "scripts": {
+	  "start": "node pokemon.js"
+  },
+
+
+
   "dependencies": {
     "axios": "^1.6.7",
     "cors": "^2.8.5",
